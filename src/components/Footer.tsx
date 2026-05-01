@@ -1,0 +1,47 @@
+import Link from 'next/link'
+
+export default function Footer() {
+  return (
+    <footer className="bg-navy text-white mt-20 rounded-t-[2.5rem]">
+      <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div>
+          <p className="text-2xl font-900 text-white mb-1">KidoKinetiq</p>
+          <p className="text-xs font-700 text-teal uppercase tracking-widest mb-4">Pași Mici. Victorii Mari.</p>
+          <p className="text-white/60 text-sm leading-relaxed">
+            Kinetoterapie pediatrică specializată pentru copii cu afecțiuni neurologice. Cu dragoste și știință.
+          </p>
+        </div>
+
+        <div>
+          <h4 className="font-800 text-white mb-4">Navigare</h4>
+          <ul className="space-y-2 text-sm">
+            {[
+              { href: '/despre', label: 'Despre noi' },
+              { href: '/servicii', label: 'Servicii' },
+              { href: '/blog', label: 'Blog' },
+              { href: '/contact', label: 'Contact' },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link href={l.href} className="text-white/70 hover:text-teal transition-colors">
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="font-800 text-white mb-4">Contact</h4>
+          <div className="space-y-2 text-sm text-white/70">
+            <p>📧 contact@kidokinetiq.ro</p>
+            <p>📞 +40 700 000 000</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="border-t border-white/10 text-center py-5 text-xs text-white/40">
+        © {new Date().getFullYear()} KidoKinetiq — Cu dragoste pentru copii
+      </div>
+    </footer>
+  )
+}
