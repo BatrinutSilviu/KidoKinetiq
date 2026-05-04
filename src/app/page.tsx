@@ -16,7 +16,7 @@ export default async function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-cream py-28 px-6">
+      <section className="relative overflow-hidden bg-cream py-16 sm:py-28 px-6">
         <HeroShapes />
 
         <div className="relative max-w-3xl mx-auto text-center">
@@ -24,7 +24,7 @@ export default async function HomePage() {
             🌈 Kinetoterapie Pediatrică Specializată
           </span>
 
-          <h1 className="text-5xl sm:text-6xl md:text-7xl font-900 text-navy leading-[1.1] mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-900 text-navy leading-[1.1] mb-8">
             Fiecare copil<br />
             merită să se<br />
             miște{' '}
@@ -56,7 +56,7 @@ export default async function HomePage() {
       </section>
 
       {/* Services preview */}
-      <section className="relative overflow-hidden bg-teal-soft rounded-t-[2.5rem] py-20 px-6">
+      <section className="relative overflow-hidden bg-teal-soft rounded-t-[2.5rem] py-14 sm:py-20 px-6">
         <PageHeaderShapes />
         <div className="relative max-w-6xl mx-auto">
           <div className="text-center mb-14">
@@ -110,7 +110,7 @@ export default async function HomePage() {
       </section>
 
       {/* Why us */}
-      <section className="bg-cream py-20 px-6">
+      <section className="bg-cream py-14 sm:py-20 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <span className="inline-block bg-purple-soft text-navy font-700 text-xs px-4 py-1.5 rounded-full uppercase tracking-widest mb-4">
@@ -191,7 +191,7 @@ export default async function HomePage() {
       )}
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-navy rounded-t-[2.5rem] py-20 px-6">
+      <section className="relative overflow-hidden bg-navy rounded-t-[2.5rem] py-14 sm:py-20 px-6">
         <DarkShapes />
         <div className="relative max-w-2xl mx-auto text-center">
           <span className="text-5xl mb-6 block">🌟</span>

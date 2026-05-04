@@ -101,7 +101,7 @@ export default async function ServicesPage() {
         })}
 
         {/* CTA strip */}
-        <div className="bg-navy rounded-3xl p-10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-navy rounded-3xl p-7 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <h3 className="text-2xl font-900 text-white mb-1">Nu știi cu ce serviciu să începi?</h3>
             <p className="text-white/60">Contactează-ne și îți recomandăm programul potrivit pentru copilul tău.</p>

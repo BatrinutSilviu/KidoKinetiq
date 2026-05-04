@@ -17,17 +17,17 @@ export default function ContactPage() {
       <div className="max-w-5xl mx-auto px-6 py-16 space-y-10">
 
         {/* Quick info pills */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {[
             { icon: '📞', label: 'Telefon', value: '+40 700 000 000' },
             { icon: '📧', label: 'Email', value: 'contact@kidokinetiq.ro' },
             { icon: '📍', label: 'Adresă', value: 'Cluj-Napoca' },
             { icon: '🕐', label: 'Program', value: 'Luni–Sâmbătă' },
           ].map((item) => (
-            <div key={item.label} className="bg-white rounded-3xl p-5 text-center hover:-translate-y-1 hover:shadow-md transition-all duration-200">
-              <span className="text-3xl mb-2 block">{item.icon}</span>
-              <p className="text-xs font-700 text-navy/40 uppercase tracking-widest mb-1">{item.label}</p>
-              <p className="font-800 text-navy text-sm">{item.value}</p>
+            <div key={item.label} className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-5 text-center hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+              <span className="text-2xl sm:text-3xl mb-2 block">{item.icon}</span>
+              <p className="text-[10px] sm:text-xs font-700 text-navy/40 uppercase tracking-widest mb-1">{item.label}</p>
+              <p className="font-800 text-navy text-xs sm:text-sm break-all">{item.value}</p>
             </div>
           ))}
         </div>
@@ -36,12 +36,12 @@ export default function ContactPage() {
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
 
           {/* Form — wider */}
-          <div className="md:col-span-3 bg-white rounded-3xl p-10">
+          <div className="md:col-span-3 bg-white rounded-3xl p-5 sm:p-8 md:p-10">
             <h2 className="text-2xl font-900 text-navy mb-1">Trimite un mesaj</h2>
             <p className="text-navy/50 text-sm mb-7">Îți răspundem în maxim 24 de ore.</p>
 
             <form className="space-y-4" action="mailto:contact@kidokinetiq.ro" method="POST" encType="text/plain">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs font-700 text-navy/60 uppercase tracking-widest mb-1.5">Nume</label>
                   <input

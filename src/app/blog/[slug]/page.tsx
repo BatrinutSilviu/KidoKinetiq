@@ -34,7 +34,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
-      <h1 className="text-4xl font-900 text-navy mb-4 leading-tight">{post.title}</h1>
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-900 text-navy mb-4 leading-tight">{post.title}</h1>
 
       <time className="text-navy/40 text-sm font-600 block mb-10">
         {new Date(post.publishedAt).toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}
