@@ -56,24 +56,18 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile nav — horizontally scrollable tab strip */}
-      <nav className="md:hidden bg-navy overflow-x-auto scrollbar-none">
-        <div className="flex items-center gap-1 px-3 py-2 w-max min-w-full">
+      {/* Mobile nav — full-width evenly spaced tabs */}
+      <nav className="md:hidden bg-navy">
+        <div className="flex items-center justify-around px-2 py-2">
           {navLinks.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-white/80 hover:text-white font-700 text-sm px-4 py-2 rounded-full hover:bg-white/10 whitespace-nowrap transition-all"
+              className="text-white/80 hover:text-white font-700 text-sm px-2 py-2 rounded-lg hover:bg-white/10 transition-all text-center"
             >
               {l.label}
             </Link>
           ))}
-          <Link
-            href="/contact"
-            className="bg-teal text-navy font-900 text-sm px-5 py-2 rounded-full hover:brightness-110 transition-all whitespace-nowrap ml-1"
-          >
-            Programare →
-          </Link>
         </div>
       </nav>
     </header>
