@@ -1,0 +1,405 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titlu"
+      },
+      {
+        "options": {
+          "source": "title"
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "publishedAt",
+        "type": "datetime",
+        "title": "Data publicării"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "mainImage",
+        "type": "image",
+        "title": "Imagine principală"
+      },
+      {
+        "rows": 3,
+        "name": "excerpt",
+        "type": "text",
+        "title": "Rezumat"
+      },
+      {
+        "of": [
+          {
+            "lists": [
+              {
+                "value": "bullet",
+                "title": "Bulleted list"
+              },
+              {
+                "value": "number",
+                "title": "Numbered list"
+              }
+            ],
+            "marks": {
+              "annotations": [
+                {
+                  "i18nTitleKey": "inputs.portable-text.annotation.link",
+                  "options": {
+                    "modal": {
+                      "type": "popover"
+                    }
+                  },
+                  "fields": [
+                    {
+                      "validation": [
+                        {
+                          "level": "error",
+                          "rules": [
+                            {
+                              "flag": "uri",
+                              "constraint": {
+                                "options": {
+                                  "scheme": [
+                                    "/^http$/",
+                                    "/^https$/",
+                                    "/^tel$/",
+                                    "/^mailto$/"
+                                  ],
+                                  "allowRelative": true,
+                                  "relativeOnly": false,
+                                  "allowCredentials": false
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      ],
+                      "description": "A valid web, email, phone, or relative link.",
+                      "name": "href",
+                      "type": "url",
+                      "title": "Link"
+                    }
+                  ],
+                  "name": "link",
+                  "type": "object"
+                }
+              ],
+              "decorators": [
+                {
+                  "value": "strong",
+                  "title": "Strong"
+                },
+                {
+                  "value": "em",
+                  "title": "Italic"
+                },
+                {
+                  "value": "code",
+                  "title": "Code"
+                },
+                {
+                  "value": "underline",
+                  "title": "Underline"
+                },
+                {
+                  "value": "strike-through",
+                  "title": "Strike"
+                }
+              ]
+            },
+            "of": [],
+            "styles": [
+              {
+                "value": "normal",
+                "title": "Normal"
+              },
+              {
+                "value": "h1",
+                "title": "Heading 1"
+              },
+              {
+                "value": "h2",
+                "title": "Heading 2"
+              },
+              {
+                "value": "h3",
+                "title": "Heading 3"
+              },
+              {
+                "value": "h4",
+                "title": "Heading 4"
+              },
+              {
+                "value": "h5",
+                "title": "Heading 5"
+              },
+              {
+                "value": "h6",
+                "title": "Heading 6"
+              },
+              {
+                "value": "blockquote",
+                "title": "Quote"
+              }
+            ],
+            "type": "block"
+          },
+          {
+            "options": {
+              "hotspot": true
+            },
+            "type": "image"
+          }
+        ],
+        "name": "body",
+        "type": "array",
+        "title": "Conținut"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Kinetoterapie",
+              "value": "kinetoterapie"
+            },
+            {
+              "title": "Hidrokinetoterapie",
+              "value": "hidrokinetoterapie"
+            },
+            {
+              "title": "Terapie Acvatică",
+              "value": "terapie-acvatica"
+            },
+            {
+              "title": "Noutăți",
+              "value": "noutati"
+            }
+          ]
+        },
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "categories",
+        "type": "array",
+        "title": "Categorii"
+      }
+    ],
+    "name": "post",
+    "type": "document",
+    "title": "Articol Blog"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "title",
+        "type": "string",
+        "title": "Titlu"
+      },
+      {
+        "name": "category",
+        "type": "string",
+        "title": "Categorie"
+      },
+      {
+        "rows": 4,
+        "name": "description",
+        "type": "text",
+        "title": "Descriere"
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "title": "Emoji / Iconiță"
+      },
+      {
+        "name": "price",
+        "type": "string",
+        "title": "Preț"
+      },
+      {
+        "name": "duration",
+        "type": "string",
+        "title": "Durată"
+      },
+      {
+        "initialValue": true,
+        "name": "available",
+        "type": "boolean",
+        "title": "Disponibil"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Ordine afișare"
+      }
+    ],
+    "name": "service",
+    "type": "document",
+    "title": "Serviciu"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Nume"
+      },
+      {
+        "name": "role",
+        "type": "string",
+        "title": "Funcție"
+      },
+      {
+        "rows": 4,
+        "name": "bio",
+        "type": "text",
+        "title": "Biografie"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "photo",
+        "type": "image",
+        "title": "Fotografie"
+      },
+      {
+        "name": "order",
+        "type": "number",
+        "title": "Ordine afișare"
+      }
+    ],
+    "name": "teamMember",
+    "type": "document",
+    "title": "Membru Echipă"
+  },
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "name",
+        "type": "string",
+        "title": "Nume"
+      },
+      {
+        "name": "relation",
+        "type": "string",
+        "title": "Relație (ex: Mama lui Andrei)"
+      },
+      {
+        "rows": 4,
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "text",
+        "type": "text",
+        "title": "Mesaj"
+      },
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "min",
+                "constraint": 1
+              },
+              {
+                "flag": "max",
+                "constraint": 5
+              }
+            ]
+          }
+        ],
+        "name": "rating",
+        "type": "number",
+        "title": "Rating (1-5)"
+      }
+    ],
+    "name": "testimonial",
+    "type": "document"
+  }
+]
