@@ -31,10 +31,7 @@ export default async function BlogPage() {
           <div className="bg-white rounded-3xl p-20 text-center">
             <span className="text-6xl mb-6 block">✍️</span>
             <h2 className="text-2xl font-900 text-navy mb-3">Niciun articol publicat încă</h2>
-            <p className="text-navy/50">
-              Adaugă primul articol din Sanity Studio la{' '}
-              <code className="bg-teal-soft px-2 py-0.5 rounded-lg text-sm font-700">/studio</code>.
-            </p>
+            <p className="text-navy/50">Vom pregăti pentru tine articole pe viitor.</p>
           </div>
         )}
       </div>

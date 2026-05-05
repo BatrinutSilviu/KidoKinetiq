@@ -20,22 +20,17 @@ export default async function HomePage() {
         <HeroShapes />
 
         <div className="relative max-w-3xl mx-auto text-center">
-          <span className="inline-block bg-teal-soft text-navy font-700 text-sm px-5 py-2 rounded-full mb-8">
-            🌈 Kinetoterapie Pediatrică Specializată
-          </span>
-
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-900 text-navy leading-[1.1] mb-8">
-            Fiecare copil<br />
-            merită să se<br />
-            miște{' '}
+            Echilibru pentru copil.<br />
+            Echilibru pentru{' '}
             <span className="relative inline-block">
-              <span className="relative z-10">liber</span>
+              <span className="relative z-10">mamă.</span>
               <span className="absolute bottom-1 left-0 w-full h-3 bg-teal opacity-50 rounded-full -z-0" />
             </span>
           </h1>
 
           <p className="text-navy/60 text-lg max-w-xl mx-auto mb-10 leading-relaxed">
-            Terapie de recuperare dedicată copiilor cu afecțiuni neurologice, printr-o abordare caldă, jucăușă și bazată pe dovezi.
+            Recuperare și profilaxie pediatrică și perinatală — terapii motrice, acvatice și complementare în confortul propriului cămin.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -197,7 +192,7 @@ export default async function HomePage() {
           <span className="text-5xl mb-6 block">🌟</span>
           <h2 className="text-4xl font-900 text-white mb-5">Începe recuperarea astăzi</h2>
           <p className="text-white/70 mb-10 text-lg leading-relaxed">
-            Contactează-ne pentru o evaluare inițială gratuită și un plan de terapie personalizat.
+            Contactează-ne pentru o evaluare inițială și un plan de terapie personalizat.
           </p>
           <Link
             href="/contact"

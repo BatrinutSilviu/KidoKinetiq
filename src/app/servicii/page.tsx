@@ -107,7 +107,7 @@ export default async function ServicesPage() {
             <p className="text-white/60">Contactează-ne și îți recomandăm programul potrivit pentru copilul tău.</p>
           </div>
           <Link href="/contact" className="bg-teal text-navy font-900 px-8 py-3.5 rounded-full hover:brightness-110 transition-all whitespace-nowrap shrink-0">
-            Consultație gratuită →
+            Programează o consultație →
           </Link>
         </div>
       </div>

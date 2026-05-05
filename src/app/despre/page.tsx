@@ -19,8 +19,8 @@ export default async function AboutPage() {
     <>
       <PageHero
         badge="Povestea noastră"
-        title="Despre KidoKinetiq"
-        subtitle="Credem că fiecare copil are potențialul de a progresa. Misiunea noastră este să-i oferim instrumentele, sprijinul și mediul potrivit."
+        title="Despre Kidokinetiq"
+        subtitle="Credem că fiecare etapă a vieții merită îngrijire specializată — kinetoterapie pediatrică, terapie perinatală și terapie acvatică, pentru copii, gravide și mame, în confortul propriului cămin."
       />
 
       {/* Story section */}
@@ -30,23 +30,28 @@ export default async function AboutPage() {
             <h2 className="text-3xl font-900 text-navy mb-5">Cine suntem</h2>
             <div className="space-y-4 text-navy/65 leading-relaxed">
               <p>
-                KidoKinetiq este o clinică de kinetoterapie pediatrică specializată în recuperarea
-                copiilor cu afecțiuni neurologice, ortopedice și de dezvoltare.
+                Kidokinetiq a pornit dintr-o nevoie reală — aceea de a completa parcursul
+                terapeutic cu servicii de recuperare la domiciliu. Alături de centrele de
+                specialitate, recuperarea acasă joacă un rol esențial: oferă continuitate,
+                confort și un mediu familiar în care copilul și mama progresează mai natural.
               </p>
               <p>
-                Echipa noastră combină expertiza clinică cu o abordare caldă și jucăușă — pentru că
-                un copil care se simte în siguranță și se distrează progresează de două ori mai repede.
+                Lucrăm atât pe uscat, cât și în apă — prin terapii acvatice adaptate — și
+                acoperim cazuri din domeniile: obstetrică și perinatologie, neuropediatrie,
+                neuropsihiatrie pediatrică și ortopedie pediatrică. Atât recuperarea, cât și
+                prevenția joacă un rol esențial — intervenția timpurie și programele profilactice
+                pot face diferența pe termen lung.
               </p>
               <p>
-                Lucrăm îndeaproape cu familia, oferind nu doar terapie în cabinet, ci și ghidaj pentru
-                continuarea exercițiilor acasă.
+                Fiecare program este construit individual, în colaborare strânsă cu familia,
+                pentru rezultate care se păstrează pe termen lung.
               </p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4">
             {[
-              { number: '10+', label: 'Ani experiență' },
-              { number: '500+', label: 'Copii tratați' },
+              { number: '7+', label: 'Ani experiență' },
+              { number: '500+', label: 'Copii și mămici care ne-au trecut pragul' },
               { number: '12', label: 'Servicii oferite' },
               { number: '100%', label: 'Dedicare' },
             ].map((stat) => (
@@ -87,8 +92,8 @@ export default async function AboutPage() {
             <p className="text-navy/55">Oamenii dedicați din spatele fiecărei ședințe de terapie</p>
           </div>
 
-          {team.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+{team.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-8">
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               {team.map((member: any) => (
                 <div key={member._id} className="bg-cream rounded-3xl p-8 text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
@@ -101,18 +106,23 @@ export default async function AboutPage() {
                   </div>
                   <h3 className="font-900 text-navy text-xl mb-1">{member.name}</h3>
                   {member.role && (
-                    <span className="inline-block bg-teal-soft text-navy font-700 text-xs px-3 py-1 rounded-full mb-3">
-                      {member.role}
-                    </span>
+                    <div className="flex flex-wrap justify-center gap-2 mb-3">
+                      {(Array.isArray(member.role) ? member.role : [member.role]).map((r: string) => (
+                        <span key={r} className="inline-block bg-teal-soft text-navy font-700 text-xs px-3 py-1 rounded-full">
+                          {r}
+                        </span>
+                      ))}
+                    </div>
                   )}
                   {member.bio && <p className="text-navy/60 text-sm leading-relaxed">{member.bio}</p>}
+                  {member.experienta && (
+                    <div className="border-t border-navy/10 mt-4 pt-4">
+                      <p className="text-navy/50 text-xs font-700 uppercase tracking-widest mb-1">Experiență</p>
+                      <p className="text-navy font-900">{member.experienta}</p>
+                    </div>
+                  )}
                 </div>
               ))}
-            </div>
-          ) : (
-            <div className="bg-cream rounded-3xl p-14 text-center">
-              <span className="text-5xl mb-4 block">👷</span>
-              <p className="text-navy/50 font-700">Adaugă membrii echipei din Sanity Studio.</p>
             </div>
           )}
         </div>
@@ -122,7 +132,7 @@ export default async function AboutPage() {
       <section className="bg-navy rounded-t-[2.5rem] py-16 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-900 text-white mb-4">Hai să ne cunoaștem</h2>
-          <p className="text-white/60 mb-8 leading-relaxed">Programează o consultație inițială gratuită și află cum putem ajuta copilul tău.</p>
+          <p className="text-white/60 mb-8 leading-relaxed">Programează o consultație inițială și află cum putem ajuta copilul tău.</p>
           <Link href="/contact" className="inline-block bg-teal text-navy font-900 px-10 py-4 rounded-full hover:brightness-110 transition-all">
             Programează acum →
           </Link>

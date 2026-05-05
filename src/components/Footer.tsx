@@ -33,8 +33,8 @@ export default function Footer() {
         <div>
           <h4 className="font-800 text-white mb-4">Contact</h4>
           <div className="space-y-2 text-sm text-white/70">
-            <p>📧 contact@kidokinetiq.ro</p>
-            <p>📞 +40 700 000 000</p>
+            <p>📧 arianaphysio@gmail.com</p>
+            <p>📞 0756 878 820</p>
           </div>
         </div>
       </div>
