@@ -96,7 +96,7 @@ export default async function AboutPage() {
             <div className="flex flex-wrap justify-center gap-8">
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
               {team.map((member: any) => (
-                <div key={member._id} className="bg-cream rounded-3xl p-8 text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-200">
+                <div key={member._id} className="bg-cream rounded-3xl p-8 text-center hover:-translate-y-1 hover:shadow-lg transition-all duration-200 w-72 flex flex-col">
                   <div className="relative w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden bg-teal-soft">
                     {member.photo ? (
                       <Image src={urlFor(member.photo).width(256).height(256).url()} alt={member.name} fill className="object-cover" />
