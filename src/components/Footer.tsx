@@ -41,6 +41,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10 text-center py-5 text-xs text-white/40">
         © {new Date().getFullYear()} KidoKinetiq — Cu dragoste pentru copii
+        <span className="block mt-1 text-white/80 font-600">Dezvoltat de Bătrînuț Silviu</span>
       </div>
     </footer>
   )
