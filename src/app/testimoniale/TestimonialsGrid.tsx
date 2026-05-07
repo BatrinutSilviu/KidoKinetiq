@@ -12,38 +12,39 @@ type Testimonial = {
 export default function TestimonialsGrid({ testimonials }: { testimonials: Testimonial[] }) {
   const [spotlit, setSpotlit] = useState<Set<string>>(new Set())
   const refs = useRef<(HTMLDivElement | null)[]>([])
-  const rafRef = useRef<number | null>(null)
 
   const update = useCallback(() => {
-    if (rafRef.current !== null) return
-    rafRef.current = requestAnimationFrame(() => {
-      rafRef.current = null
-      const vh = window.innerHeight
-      const next = new Set<string>()
-      refs.current.forEach((el, i) => {
-        if (!el) return
-        const rect = el.getBoundingClientRect()
-        const cardCenter = rect.top + rect.height / 2
-        if (cardCenter > vh * 0.2 && cardCenter < vh * 0.8) {
-          next.add(testimonials[i]._id)
-        }
-      })
-      setSpotlit((prev) => {
-        const same =
-          prev.size === next.size && [...prev].every((id) => next.has(id))
-        return same ? prev : next
-      })
+    const vh = window.innerHeight
+    const next = new Set<string>()
+    refs.current.forEach((el, i) => {
+      if (!el) return
+      const rect = el.getBoundingClientRect()
+      const cardCenter = rect.top + rect.height / 2
+      if (cardCenter > vh * 0.2 && cardCenter < vh * 0.8) {
+        next.add(testimonials[i]._id)
+      }
+    })
+    setSpotlit((prev) => {
+      const same = prev.size === next.size && [...prev].every((id) => next.has(id))
+      return same ? prev : next
     })
   }, [testimonials])
 
   useEffect(() => {
-    update()
+    // Double RAF: first fires before paint, second after layout is committed.
+    // Required for correct getBoundingClientRect on client-side navigation.
+    let id: number
+    const id1 = requestAnimationFrame(() => {
+      id = requestAnimationFrame(update)
+    })
+
     window.addEventListener('scroll', update, { passive: true })
     window.addEventListener('resize', update, { passive: true })
     return () => {
+      cancelAnimationFrame(id1)
+      cancelAnimationFrame(id)
       window.removeEventListener('scroll', update)
       window.removeEventListener('resize', update)
-      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current)
     }
   }, [update])
 

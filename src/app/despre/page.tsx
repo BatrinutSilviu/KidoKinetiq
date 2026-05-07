@@ -143,7 +143,7 @@ export default async function AboutPage() {
       <section className="bg-navy rounded-t-[2.5rem] py-16 px-6">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl font-900 text-white mb-4">Hai să ne cunoaștem</h2>
-          <p className="text-white/60 mb-8 leading-relaxed">Programează o consultație inițială și află cum putem ajuta copilul tău.</p>
+          <p className="text-white/60 mb-8 leading-relaxed">Programează o evaluare inițială și află cum te putem ajuta.</p>
           <Link href="/contact" className="inline-block bg-teal text-navy font-900 px-10 py-4 rounded-full hover:brightness-110 transition-all">
             Programează acum →
           </Link>

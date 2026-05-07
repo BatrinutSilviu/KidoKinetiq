@@ -116,7 +116,7 @@ export default async function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { icon: '🎮', title: 'Terapie prin joacă', desc: 'Integrăm jocul în fiecare ședință pentru că un copil fericit progresează mai repede.' },
+              { icon: '🎮', title: 'Combinăm terapia cu joacă', desc: 'Folosim joaca drept punte către progres, astfel încât terapia să fie o experiență în care copilul se simte bine.' },
               { icon: '🔬', title: 'Bazat pe dovezi', desc: 'Metodele noastre sunt fundamentate în cercetare clinică actuală și validate internațional.' },
               { icon: '💛', title: 'Centrat pe familie', desc: 'Implicăm părinții activ în terapie — succesul continuă și acasă.' },
             ].map((v) => (

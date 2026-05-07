@@ -12,7 +12,7 @@ export default function ContactPage() {
       <PageHero
         badge="Hai să vorbim"
         title="Contact"
-        subtitle="Suntem bucuroși să răspundem întrebărilor tale și să programăm o evaluare pentru copilul tău."
+        subtitle="Suntem bucuroși să răspundem întrebărilor tale și să programăm o evaluare pentru tine."
       />
 
       <div className="max-w-5xl mx-auto px-6 py-16 space-y-10">
@@ -54,7 +54,7 @@ export default function ContactPage() {
                   { step: '01', icon: '✉️', title: 'Trimiți mesajul', desc: 'Completezi formularul și ne descrii situația.' },
                   { step: '02', icon: '📞', title: 'Te contactăm', desc: 'Îți răspundem în maxim 24 de ore.' },
                   { step: '03', icon: '📋', title: 'Evaluare inițială', desc: 'Stabilim o ședință de evaluare.' },
-                  { step: '04', icon: '🌈', title: 'Începem terapia', desc: 'Creăm un plan personalizat pentru copilul tău.' },
+                  { step: '04', icon: '🌈', title: 'Începem terapia', desc: 'Creăm un plan personalizat pentru tine.' },
                 ].map((s) => (
                   <div key={s.step} className="flex gap-4 items-start">
                     <span className="text-xl shrink-0 mt-0.5">{s.icon}</span>

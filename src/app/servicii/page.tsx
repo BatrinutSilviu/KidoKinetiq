@@ -104,7 +104,7 @@ export default async function ServicesPage() {
         <div className="bg-navy rounded-3xl p-7 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>
             <h3 className="text-2xl font-900 text-white mb-1">Nu știi cu ce serviciu să începi?</h3>
-            <p className="text-white/60">Contactează-ne și îți recomandăm programul potrivit pentru copilul tău.</p>
+            <p className="text-white/60">Contactează-ne și îți recomandăm programul potrivit pentru tine.</p>
           </div>
           <Link href="/contact" className="bg-teal text-navy font-900 px-8 py-3.5 rounded-full hover:brightness-110 transition-all whitespace-nowrap shrink-0">
             Programează o consultație →
