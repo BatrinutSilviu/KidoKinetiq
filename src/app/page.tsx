@@ -3,6 +3,7 @@ import { client } from '@/sanity/lib/client'
 import { servicesQuery, testimonialsQuery, postsQuery } from '@/sanity/lib/queries'
 import BlogCard from '@/components/BlogCard'
 import { HeroShapes, DarkShapes, PageHeaderShapes } from '@/components/Shapes'
+import TestimonialsPreview from '@/components/TestimonialsPreview'
 
 export const revalidate = 60
 
@@ -140,22 +141,7 @@ export default async function HomePage() {
               </span>
               <h2 className="text-4xl font-900 text-navy">Ce spun părinții</h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              {testimonials.slice(0, 3).map((t: any) => (
-                <div key={t._id} className="bg-white rounded-3xl p-7">
-                  <div className="text-purple text-4xl font-900 leading-none mb-3">&ldquo;</div>
-                  <p className="text-navy/70 mb-5 leading-relaxed text-sm">{t.text}</p>
-                  <div>
-                    <p className="font-800 text-navy">{t.name}</p>
-                    {t.relation && <p className="text-navy/50 text-xs">{t.relation}</p>}
-                  </div>
-                  {t.rating && (
-                    <div className="text-teal text-sm mt-3">{'★'.repeat(t.rating)}{'☆'.repeat(5 - t.rating)}</div>
-                  )}
-                </div>
-              ))}
-            </div>
+            <TestimonialsPreview testimonials={testimonials} />
           </div>
         </section>
       )}
