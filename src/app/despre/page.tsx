@@ -8,8 +8,8 @@ import Link from 'next/link'
 export const revalidate = 60
 
 export const metadata = {
-  title: 'Despre noi — KidoKinetiq',
-  description: 'Aflați despre echipa KidoKinetiq și misiunea noastră.',
+  title: 'Despre noi — Kidokinetiq',
+  description: 'Aflați despre echipa Kidokinetiq și misiunea noastră.',
 }
 
 export default async function AboutPage() {
@@ -100,6 +100,17 @@ export default async function AboutPage() {
                   <div className="relative w-28 h-28 mx-auto mb-5 rounded-full overflow-hidden bg-teal-soft">
                     {member.photo ? (
                       <Image src={urlFor(member.photo).width(256).height(256).url()} alt={member.name} fill className="object-cover" />
+                    ) : member.gender === 'female' ? (
+                      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        {/* Hair — taller ellipse behind head */}
+                        <ellipse cx="50" cy="27" rx="18" ry="21" fill="#e07aaa"/>
+                        {/* Head */}
+                        <circle cx="50" cy="30" r="14" fill="#f0a0c8"/>
+                        {/* Neck */}
+                        <rect x="45" y="43" width="10" height="6" rx="3" fill="#f0a0c8"/>
+                        {/* Dress — flares out toward bottom */}
+                        <path d="M37 49 L21 93 L79 93 L63 49 Q57 54 50 54 Q43 54 37 49Z" fill="#f0a0c8"/>
+                      </svg>
                     ) : (
                       <span className="absolute inset-0 flex items-center justify-center text-5xl">👤</span>
                     )}

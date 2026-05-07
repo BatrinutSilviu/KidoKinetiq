@@ -11,7 +11,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "KidoKinetiq — Kinetoterapie Pediatrică",
+  title: "Kidokinetiq — recuperare și prevenție",
   description: "Kinetoterapie specializată pentru copii cu afecțiuni neurologice. Hidrokinetoterapie, terapie acvatică și recuperare medicală pediatrică.",
 };
 

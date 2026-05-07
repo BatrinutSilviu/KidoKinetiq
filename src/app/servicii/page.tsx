@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const revalidate = 60
 
 export const metadata = {
-  title: 'Servicii — KidoKinetiq',
+  title: 'Servicii — Kidokinetiq',
   description: 'Kinetoterapie, hidrokinetoterapie, terapie acvatică și masaj pentru copii.',
 }
 

@@ -13,7 +13,7 @@ export const servicesQuery = groq`*[_type == "service"] | order(order asc) {
 }`
 
 export const teamQuery = groq`*[_type == "teamMember"] | order(order asc) {
-  _id, name, role, bio, photo, experienta
+  _id, name, role, bio, photo, experienta, gender
 }`
 
 export const testimonialsQuery = groq`*[_type == "testimonial"] {

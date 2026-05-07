@@ -16,6 +16,12 @@ export const teamMemberType = defineType({
     defineField({ name: 'bio', title: 'Biografie', type: 'text', rows: 4 }),
     defineField({ name: 'photo', title: 'Fotografie', type: 'image', options: { hotspot: true } }),
     defineField({ name: 'experienta', title: 'Experiență (ex: 2019 – prezent)', type: 'string' }),
+    defineField({
+      name: 'gender',
+      title: 'Gen',
+      type: 'string',
+      options: { list: [{ title: 'Masculin', value: 'male' }, { title: 'Feminin', value: 'female' }], layout: 'radio' },
+    }),
     defineField({ name: 'order', title: 'Ordine afișare', type: 'number' }),
   ],
   orderings: [{ title: 'Ordine', name: 'orderAsc', by: [{ field: 'order', direction: 'asc' }] }],

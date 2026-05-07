@@ -2,7 +2,7 @@ import PageHero from '@/components/PageHero'
 import ContactForm from './ContactForm'
 
 export const metadata = {
-  title: 'Contact — KidoKinetiq',
+  title: 'Contact — Kidokinetiq',
   description: 'Contactează-ne pentru o programare sau mai multe informații.',
 }
 

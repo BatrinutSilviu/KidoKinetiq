@@ -6,7 +6,7 @@ import PageHero from '@/components/PageHero'
 export const revalidate = 60
 
 export const metadata = {
-  title: 'Blog — KidoKinetiq',
+  title: 'Blog — Kidokinetiq',
   description: 'Articole despre kinetoterapie pediatrică, sfaturi pentru părinți și noutăți.',
 }
 

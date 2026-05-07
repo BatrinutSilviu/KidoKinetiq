@@ -8,6 +8,7 @@ const navLinks = [
   { href: '/despre', label: 'Despre' },
   { href: '/servicii', label: 'Servicii' },
   { href: '/blog', label: 'Blog' },
+  { href: '/testimoniale', label: 'Testimoniale' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -22,7 +23,7 @@ export default function Navbar() {
         <Link href="/" className="flex flex-col items-center group">
           <Image
             src="/logo.png"
-            alt="KidoKinetiq"
+            alt="Kidokinetiq"
             width={110}
             height={110}
             className="group-hover:scale-105 transition-transform duration-200 drop-shadow-sm"
