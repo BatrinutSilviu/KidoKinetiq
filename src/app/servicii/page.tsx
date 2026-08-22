@@ -96,7 +96,11 @@ export default async function ServicesPage() {
                     )}
 
                     {s.observations && (
-                      <p className="text-navy/50 text-xs leading-relaxed mt-3 italic">{s.observations}</p>
+                      <div className="flex items-center gap-2 mt-2 flex-wrap">
+                        <span className="bg-purple-soft text-navy/70 text-xs font-700 px-3 py-1 rounded-full">
+                          {s.observations}
+                        </span>
+                      </div>
                     )}
                   </div>
                 ))}
