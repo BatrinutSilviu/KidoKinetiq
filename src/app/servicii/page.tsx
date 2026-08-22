@@ -18,6 +18,7 @@ type Service = {
   icon?: string
   price?: string
   duration?: string
+  sessions?: string
   observations?: string
   available?: boolean
 }
@@ -80,11 +81,16 @@ export default async function ServicesPage() {
                       <p className="text-navy/60 text-sm leading-relaxed flex-1">{s.description}</p>
                     )}
 
-                    {(s.price || s.duration) && (
+                    {(s.price || s.duration || s.sessions) && (
                       <div className="flex items-center gap-2 mt-5 flex-wrap">
                         {s.duration && (
                           <span className="bg-cream text-navy/60 text-xs font-700 px-3 py-1 rounded-full">
                             ⏱ {s.duration}
+                          </span>
+                        )}
+                        {s.sessions && (
+                          <span className="bg-cream text-navy/60 text-xs font-700 px-3 py-1 rounded-full">
+                            🔁 {s.sessions}
                           </span>
                         )}
                         {s.price && (
