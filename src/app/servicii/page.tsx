@@ -82,19 +82,19 @@ export default async function ServicesPage() {
                     )}
 
                     {(s.price || s.duration || s.sessions) && (
-                      <div className="flex items-center gap-2 mt-5 flex-wrap">
+                      <div className="flex items-center gap-2 mt-5 flex-nowrap overflow-x-auto">
                         {s.duration && (
-                          <span className="bg-cream text-navy/60 text-xs font-700 px-3 py-1 rounded-full">
+                          <span className="bg-cream text-navy/60 text-xs font-700 px-3 py-1 rounded-full shrink-0 whitespace-nowrap">
                             ⏱ {s.duration}
                           </span>
                         )}
                         {s.sessions && (
-                          <span className="bg-cream text-navy/60 text-xs font-700 px-3 py-1 rounded-full">
-                            🔁 {s.sessions}
+                          <span className="bg-cream text-navy/60 text-xs font-700 px-3 py-1 rounded-full shrink-0 whitespace-nowrap">
+                            {s.sessions}
                           </span>
                         )}
                         {s.price && (
-                          <span className="bg-teal text-navy text-xs font-900 px-3 py-1 rounded-full">
+                          <span className="bg-teal text-navy text-xs font-900 px-3 py-1 rounded-full shrink-0 whitespace-nowrap">
                             {s.price}
                           </span>
                         )}
