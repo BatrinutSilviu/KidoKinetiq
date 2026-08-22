@@ -18,6 +18,7 @@ type Service = {
   icon?: string
   price?: string
   duration?: string
+  observations?: string
   available?: boolean
 }
 
@@ -92,6 +93,10 @@ export default async function ServicesPage() {
                           </span>
                         )}
                       </div>
+                    )}
+
+                    {s.observations && (
+                      <p className="text-navy/50 text-xs leading-relaxed mt-3 italic">{s.observations}</p>
                     )}
                   </div>
                 ))}

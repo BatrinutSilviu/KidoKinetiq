@@ -9,7 +9,7 @@ export const postBySlugQuery = groq`*[_type == "post" && slug.current == $slug][
 }`
 
 export const servicesQuery = groq`*[_type == "service"] | order(order asc) {
-  _id, title, category, description, icon, price, duration, available
+  _id, title, category, description, icon, price, duration, observations, available
 }`
 
 export const teamQuery = groq`*[_type == "teamMember"] | order(order asc) {
@@ -18,4 +18,12 @@ export const teamQuery = groq`*[_type == "teamMember"] | order(order asc) {
 
 export const testimonialsQuery = groq`*[_type == "testimonial"] {
   _id, name, relation, text, rating
+}`
+
+export const patientAppointmentsByTokenQuery = groq`*[_type == "patient" && accessToken == $accessToken][0] {
+  _id, name,
+  "appointments": *[_type == "appointment" && references(^._id)] | order(date asc) {
+    _id, date, duration, location, status,
+    "service": service->{ title, icon }
+  }
 }`

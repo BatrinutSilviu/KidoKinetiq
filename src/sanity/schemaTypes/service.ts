@@ -11,6 +11,7 @@ export const serviceType = defineType({
     defineField({ name: 'icon', title: 'Emoji / Iconiță', type: 'string' }),
     defineField({ name: 'price', title: 'Preț', type: 'string' }),
     defineField({ name: 'duration', title: 'Durată', type: 'string' }),
+    defineField({ name: 'observations', title: 'Observații', type: 'text', rows: 3 }),
     defineField({
       name: 'available',
       title: 'Disponibil',
