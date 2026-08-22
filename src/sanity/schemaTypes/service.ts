@@ -6,7 +6,13 @@ export const serviceType = defineType({
   type: 'document',
   fields: [
     defineField({ name: 'title', title: 'Titlu', type: 'string', validation: (r) => r.required() }),
-    defineField({ name: 'category', title: 'Categorie', type: 'string' }),
+    defineField({
+      name: 'category',
+      title: 'Categorie',
+      type: 'reference',
+      to: [{ type: 'serviceCategory' }],
+      validation: (r) => r.required(),
+    }),
     defineField({ name: 'description', title: 'Descriere', type: 'text', rows: 4 }),
     defineField({ name: 'icon', title: 'Emoji / Iconiță', type: 'string' }),
     defineField({ name: 'price', title: 'Preț', type: 'string' }),
@@ -19,7 +25,12 @@ export const serviceType = defineType({
       type: 'boolean',
       initialValue: true,
     }),
-    defineField({ name: 'order', title: 'Ordine afișare', type: 'number' }),
+    defineField({
+      name: 'order',
+      title: 'Ordine în categorie',
+      description: 'Poziția acestui serviciu în cadrul categoriei sale.',
+      type: 'number',
+    }),
   ],
   orderings: [{ title: 'Ordine', name: 'orderAsc', by: [{ field: 'order', direction: 'asc' }] }],
 })

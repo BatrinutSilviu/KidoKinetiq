@@ -8,8 +8,8 @@ export const postBySlugQuery = groq`*[_type == "post" && slug.current == $slug][
   _id, title, slug, publishedAt, mainImage, body, categories
 }`
 
-export const servicesQuery = groq`*[_type == "service"] | order(order asc) {
-  _id, title, category, description, icon, price, duration, sessions, observations, available
+export const servicesQuery = groq`*[_type == "service"] | order(category->order asc, order asc) {
+  _id, title, "category": category->title, description, icon, price, duration, sessions, observations, available
 }`
 
 export const teamQuery = groq`*[_type == "teamMember"] | order(order asc) {
