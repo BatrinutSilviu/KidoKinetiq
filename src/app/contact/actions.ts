@@ -14,7 +14,7 @@ export async function sendContactEmail(_prevState: unknown, formData: FormData) 
   try {
     await resend.emails.send({
       from: 'Kidokinetiq Contact <onboarding@resend.dev>',
-      to: 'arianaphysio@gmail.com',
+      to: 'kidokinetiq.contact@gmail.com',
       subject: `Mesaj nou de la ${name} ${surname}`,
       text: `Nume: ${name} ${surname}\nEmail: ${email}\nTelefon: ${phone || 'N/A'}\n\nMesaj:\n${message}`,
     })

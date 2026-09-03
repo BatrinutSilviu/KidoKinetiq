@@ -115,6 +115,12 @@ export default async function ServicesPage() {
           )
         })}
 
+        {/* General note */}
+        <div className="flex items-start gap-3 bg-cream rounded-2xl p-5 text-sm text-navy/60">
+          <span className="text-lg leading-none">ℹ️</span>
+          <p>În cazul deplasărilor în afara municipiului Arad sau Timișoara se percepe taxă suplimentară de deplasare.</p>
+        </div>
+
         {/* CTA strip */}
         <div className="bg-navy rounded-3xl p-7 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
           <div>

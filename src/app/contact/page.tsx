@@ -21,7 +21,7 @@ export default function ContactPage() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {[
             { icon: '📞', label: 'Telefon', value: '0756 878 820' },
-            { icon: '📧', label: 'Email', value: 'arianaphysio@gmail.com' },
+            { icon: '📧', label: 'Email', value: 'kidokinetiq.contact@gmail.com' },
             { icon: '📍', label: 'Adresă', value: 'Arad & Timișoara' },
             { icon: '🕐', label: 'Program', value: 'Luni–Sâmbătă' },
           ].map((item) => (
